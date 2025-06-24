@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dünya Gözümden 💖</title>
+  <link rel="stylesheet" href="Syless.css" />
+</head>
+<body>
+
+
+  <header>
+    <h1>🤍 Şiddet Bağımlısı Güzeller Güzelim, Gönlümün Sultanına🤍</h1>
+    <p>Senin için hazırladığım küçük bir sürpriz...</p>
+<audio controls autoplay loop>
+    <source src="assets/sarkim.mp3" type="audio/mpeg">
+    Tarayıcınız bu ses öğesini desteklemiyor.
+  </audio>
+</header>
+  <section class="about">
+    <h2> Senle Ben </h2>
+    <p>[Tesadüflere İnanırmısın, Ben İnanıyorum.Seni Sevmeye Koskoca Grupta ilk Kedilerle fetih yaparken başlamıştım. Şimdi en güzel Hayallerimin sahibisin.Sen Hayallerimin  Başyapıtısısın. Sen bu Yüreğimin Sahibisin.Hani sen demiştin fazla hayaller kurmak iyi değildir. Ama şunu unutuyorsun Hayallerde sen varsan ben ince ayrıntısına kadar kurarım. Çünkü gerçekleştireceğime İnanıyorum. </p>
+  </section>
+
+  <section class="gallery">
+    <h2>Senin İçin Hazırladıklarım.</h2>
+    <div class="photos">
+        <section class="gallery">
+    <div class="photos">
+      <!-- Her fotoğraf link içinde olacak, href lightbox için -->
+      <a href="#lightbox" data-img="assets/foto1.jpg"><img src="assets/foto1.jpg" alt="Foto 1" /></a>
+      <a href="#lightbox" data-img="assets/foto2.jpg"><img src="assets/foto2.jpg" alt="Foto 2" /></a>
+      <a href="#lightbox" data-img="assets/foto3.jpg"><img src="assets/foto3.jpg" alt="Foto 3" /></a>
+      <a href="#lightbox" data-img="assets/foto4.jpg"><img src="assets/foto4.jpg" alt="Foto 4" /></a>
+      <a href="#lightbox" data-img="assets/foto5.jpg"><img src="assets/foto5.jpg" alt="Foto 5" /></a>
+      <a href="#lightbox" data-img="assets/foto6.jpg"><img src="assets/foto6.jpg" alt="Foto 6" /></a>
+      <a href="#lightbox" data-img="assets/foto7.jpg" ><img src="assets/foto7.jpg" alt="Foto 7" /></a>
+      <a href="#lightbox" data-img="assets/foto8.jpg"><img src="assets/foto8.jpg" alt="Foto 8" /></a>
+      <a href="#lightbox" data-img="assets/foto9.jpg"><img src="assets/foto9.jpg" alt="Foto 9" /></a>
+      <a href="#lightbox" data-img="assets/foto10.jpg"><img src="assets/foto10.jpg" alt="Foto 10" /></a>
+      <a href="#lightbox" data-img="assets/foto11.jpg"><img src="assets/foto11.jpg" alt="Foto 11" /></a>
+      <a href="#lightbox" data-img="assets/foto12.jpg"><img src="assets/foto12.jpg" alt="Foto 12" /></a>
+    </div>
+  </section>
+    </div>
+  </section>  <div id="lightbox" onclick="closeLightbox(event)">
+    <img id="lightbox-img" src="" alt="Ön İzleme" />
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const links = document.querySelectorAll('.gallery .photos a');
+
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const imgSrc = this.getAttribute('data-img');
+        lightboxImg.src = imgSrc;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    function closeLightbox(e) {
+      if (e.target !== lightboxImg) {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+      }
+    }
+  </script>
+
+  <section class="letter">
+    <h2>Sana Bir Mesajım Var...</h2>
+    <p>[Sevilmeyi Sonuna kadar hak ediyorsun Bitanem. Ve Seni Sonsuza Kadar Seveceğim... ]</p>
+  </section>
+
+  <footer>
+    <p>Hazırlayan: 💌 [Sütlaç]</p>
+  </footer>
+</body>
+</html>
