@@ -11,7 +11,9 @@
 
 <body class="fade-in">
   <body>
-  <div class="heart-container"></div>
+  <body>
+  <div class="heart-background"></div>
+
   <!-- geri kalan içerik burada -->
 
   <header>
@@ -74,37 +76,28 @@
     }
     
   </script>
-  <script>
-  const heartContainer = document.querySelector('.heart-container');
+<script>
+  const heartBG = document.querySelector('.heart-background');
 
   function createHeart() {
     const heart = document.createElement('div');
     heart.classList.add('heart');
     heart.innerText = '💖';
 
-    // Rastgele konum ve boyut
+    // Rastgele konum, boyut, süre
     heart.style.left = Math.random() * 100 + 'vw';
-    heart.style.fontSize = (Math.random() * 10 + 15) + 'px';
-    heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+    heart.style.fontSize = Math.random() * 15 + 15 + 'px';
+    heart.style.animationDuration = Math.random() * 3 + 4 + 's';
 
-    heartContainer.appendChild(heart);
+    heartBG.appendChild(heart);
 
     setTimeout(() => {
       heart.remove();
-    }, 5000);
+    }, 7000);
   }
 
-  setInterval(createHeart, 300); // 300ms'de bir yeni kalp
+  setInterval(createHeart, 250); // 250ms'de bir kalp oluştur
 </script>
 
-
-  <section class="letter">
-    <h2>Sana Bir Mesajım Var...</h2>
-    <p>[Sevilmeyi Sonuna kadar hak ediyorsun Bitanem. Ve Seni Sonsuza Kadar Seveceğim... ]</p>
-  </section>
-
-  <footer>
-    <p>Hazırlayan: 💌 [Sütlaç]</p>
-  </footer>
 </body>
 </html>
