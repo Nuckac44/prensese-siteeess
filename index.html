@@ -11,9 +11,7 @@
 
 <body class="fade-in">
   <body>
-  <body>
-  <div class="heart-background"></div>
-
+  <div class="heart-container"></div>
   <!-- geri kalan içerik burada -->
 
   <header>
@@ -27,6 +25,18 @@
   <section class="about">
     <h2> Senle Ben </h2>
     <p>[Tesadüflere İnanırmısın, Ben İnanıyorum.Seni Sevmeye Koskoca Grupta ilk Kedilerle fetih yaparken başlamıştım. Şimdi en güzel Hayallerimin sahibisin.Sen Hayallerimin  Başyapıtısısın. Sen bu Yüreğimin Sahibisin.Hani sen demiştin fazla hayaller kurmak iyi değildir. Ama şunu unutuyorsun Hayallerde sen varsan ben ince ayrıntısına kadar kurarım. Çünkü gerçekleştireceğime İnanıyorum. </p>
+  <section class="letter">
+  <h2>Sana Bir Mesajım Var...</h2>
+  <p>[Sevilmeyi Sonuna kadar hak ediyorsun Bitanem. Ve Seni Sonsuza Kadar Seveceğim... ]</p>
+</section>
+
+<section class="video">
+  <h2>Güzeller Güzelimmmm...</h2>
+  <video controls autoplay loop width="100%" style="max-width: 600px; border-radius: 10px;">
+    <source src="assets/video.mp4" type="video/mp4">
+    Tarayıcınız bu videoyu desteklemiyor.
+  </video>
+</section>
   </section>
 
   <section class="gallery">
@@ -76,29 +86,9 @@
     }
     
   </script>
-<script>
-  const heartBG = document.querySelector('.heart-background');
+  
 
-  function createHeart() {
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    heart.innerText = '💖';
-
-    // Rastgele konum, boyut, süre
-    heart.style.left = Math.random() * 100 + 'vw';
-    heart.style.fontSize = Math.random() * 15 + 15 + 'px';
-    heart.style.animationDuration = Math.random() * 3 + 4 + 's';
-
-    heartBG.appendChild(heart);
-
-    setTimeout(() => {
-      heart.remove();
-    }, 7000);
-  }
-
-  setInterval(createHeart, 250); // 250ms'de bir kalp oluştur
-</script>
-<section class="letter">
+  <section class="letter">
     <h2>Sana Bir Mesajım Var...</h2>
     <p>[Sevilmeyi Sonuna kadar hak ediyorsun Bitanem. Ve Seni Sonsuza Kadar Seveceğim... ]</p>
   </section>
